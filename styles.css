@@ -34,6 +34,17 @@ h1, h2, h3, .logo-wordmark, .kicker, .eyebrow, nav.site .links a, .btn {
   font-family: "Exo 2", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* Headers specifically (not the kicker/eyebrow labels, nav links, or
+   buttons above — those stay upright) are italic, matching the
+   wordmark's own Black Italic treatment. Needs the actual italic font
+   file loaded at whatever weight each header renders at (see each
+   header's own font-weight below) — the <link> in every page's <head>
+   was widened to cover this; without a matching italic weight loaded,
+   the browser falls back to a synthetic slant instead of the real font. */
+h1, h2, h3 {
+  font-style: italic;
+}
+
 a { color: var(--orange); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -367,6 +378,6 @@ footer.site .links a:hover { color: var(--orange); }
 
 .doc h1 { font-size: 34px; font-weight: 900; margin-bottom: 6px; color: var(--ink); }
 .doc .updated { color: var(--ink-faint); font-size: 13px; margin-bottom: 40px; }
-.doc h2 { font-size: 20px; margin-top: 40px; color: var(--ink); }
+.doc h2 { font-size: 20px; font-weight: 900; margin-top: 40px; color: var(--ink); }
 .doc p, .doc li { color: var(--ink-dim); font-size: 15.5px; }
 .doc ul { padding-left: 20px; }
