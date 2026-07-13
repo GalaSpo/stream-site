@@ -113,6 +113,18 @@ nav.site {
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.55);
 }
 
+/* Plain-text "Stream" suffix next to the wordmark chip — keeps the
+   crafted logo asset itself untouched as "GalaSpo", while still giving
+   both automated crawlers and human reviewers a visible, unstyled
+   "GalaSpo Stream" reading for OAuth brand-verification matching. */
+.brand-suffix {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink);
+  letter-spacing: -0.2px;
+}
+
 /* Larger hero version of the same wordmark */
 .logo-wordmark.lg {
   font-size: 34px;
