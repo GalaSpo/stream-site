@@ -127,6 +127,18 @@ nav.site .links a:hover { color: var(--orange); text-decoration: none; }
   text-align: center;
 }
 
+/* Scoped to .hero specifically, not the shared .wrap class (used
+   elsewhere for full-width grids that must NOT be flex-centered) —
+   belt-and-suspenders centering for the hero's own children alongside
+   each element's individual margin: 0 auto. */
+.hero .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero .wrap > * { max-width: 100%; }
+
 .hero .eyebrow {
   display: inline-block;
   color: var(--orange);
