@@ -184,6 +184,13 @@ nav.site .links a:hover { color: var(--orange); text-decoration: none; }
 
 .hero h1 .accent { color: var(--orange); }
 
+.hero p.punchline {
+  font-weight: 800;
+  font-size: clamp(17px, 2.4vw, 21px);
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+
 .hero p.lead {
   max-width: 620px;
   margin: 0 auto 36px;
