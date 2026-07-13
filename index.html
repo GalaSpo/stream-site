@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GalaSpo Stream — Live Youth Sports Broadcasting from an iPhone</title>
+<meta name="description" content="GalaSpo Stream turns an iPhone into a full broadcast rig for youth sports — live to YouTube with a real-time scoreboard overlay, no extra hardware.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="site">
+    <div class="brand"><span>GalaSpo</span><span class="dot">Stream</span></div>
+    <div class="links">
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">iOS · Live Streaming</span>
+    <h1>Turn an iPhone into a<br><span class="accent">full broadcast rig.</span></h1>
+    <p class="lead">
+      GalaSpo Stream is built for the parents, coaches, and volunteers on the sideline of
+      youth sports games — one phone, one tap, live on YouTube with a real scoreboard
+      burned right into the broadcast.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="support.html">Get in touch</a>
+      <a class="btn btn-secondary" href="#features">See what it does</a>
+    </div>
+
+    <!-- A lightweight visual echo of the real in-app overlay, not a screenshot -->
+    <div class="mock-overlay" aria-hidden="true">
+      <div class="mock-row">
+        <div class="mock-team"><span class="mock-badge home"></span>RICHMOND UNITED</div>
+        <div class="mock-score">2&nbsp;&nbsp;-&nbsp;&nbsp;1</div>
+        <div class="mock-team">SOCCER QUEST<span class="mock-badge away"></span></div>
+      </div>
+      <div class="mock-meta">
+        <span>2ND HALF</span><span class="sep">·</span><span>34:12</span><span class="sep">·</span><span>LIVE ON YOUTUBE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Features</span>
+      <h2>Everything a sideline broadcast needs</h2>
+      <p>No production truck, no laptop, no second operator — it all runs on the phone doing the filming.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">▶</div>
+        <h3>Direct to YouTube, live</h3>
+        <p>Streams straight from the camera to a scheduled YouTube broadcast — no relay server, no separate encoder box.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">◧</div>
+        <h3>Real scoreboard overlay</h3>
+        <p>Team names, logos, colors, live score, and the game clock are burned directly into the video viewers see — not a browser overlay layered on top.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">⚑</div>
+        <h3>Added time &amp; event cards</h3>
+        <p>Fouls, yellow cards, red cards, offside, and stoppage time all get their own on-screen callouts, triggered right from the sideline.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">▣</div>
+        <h3>HD through 4K</h3>
+        <p>Pick a resolution and that's exactly what's delivered — no hidden downscaling. Bitrate adjusts itself automatically to match your connection.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">⚲</div>
+        <h3>Smooth zoom control</h3>
+        <p>A dedicated on-screen zoom stick sweeps across every lens on the phone, so following the play stays smooth instead of a jump-cut pinch.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">▤</div>
+        <h3>Built-in scheduling</h3>
+        <p>Create the matchup — teams, colors, logos, kickoff time — and it syncs straight to YouTube's own broadcast scheduling. Nothing to re-enter on game day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">From the sidelines</span>
+      <h2>Real games, real teams</h2>
+      <p>A few from the pitch — more added as they come in.</p>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="links">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  &copy; <span id="year"></span> GalaSpo. All rights reserved.
+</footer>
+
+<script src="gallery-images.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Renders every configured photo, then pads out to a minimum grid size
+  // with empty "add a photo" placeholders — see gallery-images.js for how
+  // to add one. Keeping a minimum count is purely cosmetic: an
+  // almost-empty grid looks unfinished, a full one with a couple of
+  // placeholder slots reads as "more coming soon."
+  const MIN_SLOTS = 6;
+  const grid = document.getElementById("gallery-grid");
+  const images = (typeof GALLERY_IMAGES !== "undefined") ? GALLERY_IMAGES : [];
+
+  images.forEach((src) => {
+    const cell = document.createElement("div");
+    cell.className = "gallery-item";
+    const img = document.createElement("img");
+    img.src = src;
+    img.loading = "lazy";
+    img.alt = "Game day photo";
+    cell.appendChild(img);
+    grid.appendChild(cell);
+  });
+
+  for (let i = images.length; i < MIN_SLOTS; i++) {
+    const cell = document.createElement("div");
+    cell.className = "gallery-empty";
+    cell.textContent = "Photo coming soon";
+    grid.appendChild(cell);
+  }
+</script>
+</body>
+</html>

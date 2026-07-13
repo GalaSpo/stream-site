@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — GalaSpo Stream</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="site">
+    <div class="brand"><span>GalaSpo</span><span class="dot">Stream</span></div>
+    <div class="links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+</header>
+
+<div class="doc">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: <span id="date"></span></p>
+
+  <p>
+    This policy covers the GalaSpo Stream iOS app. It's written to describe
+    plainly what the app actually does, not as boilerplate — if anything
+    here is unclear, <a href="support.html">reach out</a>.
+  </p>
+
+  <h2>What the app accesses on your device</h2>
+  <ul>
+    <li><strong>Camera and microphone</strong> — used only to capture the live video/audio you're broadcasting. This never leaves your device except as the video stream you've explicitly started.</li>
+    <li><strong>Photo library (optional)</strong> — only if you choose to pick a team logo from your photos.</li>
+  </ul>
+
+  <h2>Your YouTube account</h2>
+  <p>
+    GalaSpo Stream connects to your YouTube channel through Google's own
+    sign-in so it can create, schedule, and manage the live broadcasts you
+    start from the app, and read basic channel/broadcast info needed to do
+    that. The app requests YouTube account access for this purpose only.
+  </p>
+  <p>
+    <strong>Your video stream goes directly to YouTube.</strong> GalaSpo
+    does not operate a relay server that the broadcast passes through, and
+    does not separately record or store a copy of your stream.
+  </p>
+  <p>
+    You can revoke this access at any time from your
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a>
+    page.
+  </p>
+
+  <h2>What's stored, and where</h2>
+  <p>
+    Match setup — team names, colors, logos, schedule details, and your
+    streaming preferences (resolution, frame rate) — is stored locally on
+    your device and, where it's part of a scheduled broadcast, in your own
+    YouTube account's broadcast data. GalaSpo does not run its own backend
+    database of your matches, teams, or viewers.
+  </p>
+
+  <h2>What we don't do</h2>
+  <ul>
+    <li>No advertising or ad-tracking SDKs.</li>
+    <li>No selling or sharing of your data with third parties for their own purposes.</li>
+    <li>No analytics tracking of who you are or how you individually use the app.</li>
+  </ul>
+
+  <h2>Filming minors</h2>
+  <p>
+    GalaSpo Stream is commonly used to broadcast youth sports. The app
+    itself is used by the adult operating it (a parent, coach, or
+    volunteer) — it is not directed at or used by children. Because the
+    resulting broadcast may include footage of minors, whoever operates
+    the stream is responsible for that broadcast's visibility settings
+    (Public, Unlisted, or Private) on YouTube and for following their
+    league's or organization's own policies around filming and publishing
+    video of youth participants.
+  </p>
+
+  <h2>Data deletion</h2>
+  <p>
+    Uninstalling the app removes everything stored locally on your device.
+    Revoking access from your Google Account (link above) removes GalaSpo's
+    access to your YouTube account. To request removal of anything else,
+    <a href="support.html">contact us</a>.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If this policy changes in a meaningful way, the "last updated" date
+    above will change along with it.
+  </p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: see the <a href="support.html">Support</a> page.</p>
+</div>
+
+<footer class="site">
+  <div class="links">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  &copy; <span id="year"></span> GalaSpo. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("date").textContent = new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+</script>
+</body>
+</html>
