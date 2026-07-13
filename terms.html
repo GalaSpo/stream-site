@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>Terms of Service — GalaSpo Stream</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,700;0,900;1,900&display=swap" rel="stylesheet">
+<link rel="icon" href="images/brand/favicon-32.png" sizes="32x32">
+<link rel="icon" href="images/brand/favicon-16.png" sizes="16x16">
+<link rel="apple-touch-icon" href="images/brand/favicon-180.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="site">
+    <div class="brand">
+      <img class="app-icon" src="images/brand/app-icon-180.png" alt="GalaSpo Stream app icon">
+      <div class="logo-wordmark"><span class="gala">Gala</span><span class="spo">Spo</span></div>
+    </div>
+    <div class="links">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+</header>
+
+<div class="doc">
+  <h1>Terms of Service</h1>
+  <p class="updated">Last updated: <span id="date"></span></p>
+
+  <p>
+    These terms cover use of the GalaSpo Stream iOS app. By downloading
+    or using the app, you agree to them. If anything here is unclear,
+    <a href="support.html">reach out</a>.
+  </p>
+
+  <h2>What the app is</h2>
+  <p>
+    GalaSpo Stream is a free iOS app that lets you broadcast live video
+    from an iPhone directly to your own YouTube channel, with a
+    scoreboard overlay (teams, colors, logos, score, and game clock)
+    burned into the video. It's built for junior athlete parents, coaches,
+    and volunteers, and works equally well for adult leagues.
+  </p>
+
+  <h2>Your YouTube account and the YouTube API</h2>
+  <p>
+    GalaSpo Stream connects to your YouTube channel through Google's own
+    sign-in so it can create, schedule, and manage the live broadcasts you
+    start from the app. This use of the YouTube API Services is subject
+    to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>,
+    and by using GalaSpo Stream's YouTube features you also agree to the
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
+    You can revoke GalaSpo Stream's access to your account at any time
+    from your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a> page.
+  </p>
+  <p>
+    Your video stream is sent directly to YouTube — GalaSpo does not
+    operate a relay server the broadcast passes through, and does not
+    separately record or store a copy of it. See the
+    <a href="privacy.html">Privacy Policy</a> for the full detail on what
+    the app accesses and stores.
+  </p>
+
+  <h2>Your responsibility for what you broadcast</h2>
+  <p>
+    You're responsible for the content you stream, the visibility settings
+    (Public, Unlisted, or Private) you choose on YouTube for each
+    broadcast, and for following your league's or organization's own
+    rules around filming and publishing video — including video of minors.
+    GalaSpo Stream is a tool for creating and sending the broadcast; it
+    does not review, moderate, or take responsibility for what you choose
+    to stream or publish.
+  </p>
+
+  <h2>Account requirements</h2>
+  <p>
+    You need your own YouTube channel enabled for live streaming to use
+    GalaSpo Stream's broadcast features, and you must be old enough under
+    Google's own terms to hold a Google Account. GalaSpo Stream itself is
+    operated by an adult (a parent, coach, or volunteer) — it is not
+    directed at or intended to be used directly by children.
+  </p>
+
+  <h2>No warranty</h2>
+  <p>
+    GalaSpo Stream is provided free, "as is," without warranties of any
+    kind. Live streaming depends on things outside the app's control —
+    your device, your network connection, and YouTube's own service — so
+    we can't guarantee an uninterrupted or error-free broadcast every time.
+  </p>
+
+  <h2>Limitation of liability</h2>
+  <p>
+    To the fullest extent permitted by law, GalaSpo is not liable for any
+    indirect, incidental, or consequential damages arising from your use
+    of the app, including a missed, dropped, or failed broadcast.
+  </p>
+
+  <h2>Changes to the app or these terms</h2>
+  <p>
+    The app may change or add features over time, and these terms may be
+    updated to reflect that. If a change is meaningful, the "last updated"
+    date above will change along with it. Continuing to use the app after
+    an update means you accept the revised terms.
+  </p>
+
+  <h2>Termination</h2>
+  <p>
+    You can stop using GalaSpo Stream at any time by deleting the app and
+    revoking its access from your Google Account permissions page (linked
+    above). We may also discontinue the app or a given feature at any time.
+  </p>
+
+  <h2>Contact</h2>
+  <p>Questions about these terms: see the <a href="support.html">Support</a> page.</p>
+</div>
+
+<footer class="site">
+  <div class="links">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+  &copy; <span id="year"></span> GalaSpo. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("date").textContent = new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+</script>
+</body>
+</html>
