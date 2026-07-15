@@ -8,5 +8,11 @@
 //   ];
 
 const GALLERY_IMAGES = [
-  // "images/gallery/your-photo-here.jpg",
+  "images/gallery/kickoff-scoreboard.jpg",
+  "images/gallery/scorekeeper-controller.jpg",
+  "images/gallery/live-overlay-wide-field.jpg",
+  "images/gallery/live-overlay-goal-net.jpg",
+  "images/gallery/added-time-offside-overlay.jpg",
+  "images/gallery/live-overlay-park-field.jpg",
+  "images/gallery/zoom-closeup-grass.jpg",
 ];
