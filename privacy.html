@@ -67,6 +67,41 @@
     page.
   </p>
 
+  <h2>How we protect your YouTube data</h2>
+  <p>
+    All communication between the app and Google's/YouTube's servers is
+    made over HTTPS/TLS — nothing is sent in the clear.
+  </p>
+  <p>
+    Your OAuth access and refresh tokens — the credentials that let the
+    app act on your YouTube channel — are stored exclusively in Apple's
+    iOS Keychain, never in plain app storage, <code>UserDefaults</code>,
+    or unencrypted device backups. Keychain items are encrypted at rest
+    by the device's hardware, are scoped to this app only (no other app
+    on the device can read them), and are set to unlock only after the
+    device has been unlocked at least once since restart. GalaSpo does
+    not operate a server of its own that receives, stores, or has access
+    to these tokens, your channel data, or your stream content — the app
+    talks directly, device-to-Google, and nothing YouTube-related passes
+    through or is retained on infrastructure we control.
+  </p>
+  <p>
+    Because YouTube account access is a sensitive/restricted scope,
+    GalaSpo's use and transfer of information received from Google APIs
+    adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+    including the Limited Use requirements: this data is used only to
+    provide the live-broadcast features described above, is never used
+    for serving ads, and is never sold, shared, or transferred to third
+    parties.
+  </p>
+  <p>
+    Deleting the app removes these Keychain-stored tokens along with
+    everything else stored locally — see <a href="#data-deletion">Data
+    deletion</a> below — and you can revoke access at any time from your
+    Google Account, as noted above.
+  </p>
+
   <h2>What's stored, and where</h2>
   <p>
     Match setup — team names, colors, logos, schedule details, and your
@@ -107,7 +142,7 @@
     broadcast.
   </p>
 
-  <h2>Data deletion</h2>
+  <h2 id="data-deletion">Data deletion</h2>
   <p>
     Uninstalling the app removes everything stored locally on your device.
     Revoking access from your Google Account (link above) removes GalaSpo's
